@@ -19,11 +19,15 @@ $ npm install
 # development
 $ npm run start
 
+# Running with docker
+$ npm run docker:start 
+
 # watch mode
 $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
 ```
 
 ## Test
@@ -32,8 +36,12 @@ $ npm run start:prod
 # unit tests
 $ npm run test
 
-# e2e tests
+# Starting docker dependencies + e2e tests
+$ npm run docker:start:dependencies
 $ npm run test:e2e
+
+# e2e tests with docker
+$ npm run docker:test
 
 # test coverage
 $ npm run test:cov
