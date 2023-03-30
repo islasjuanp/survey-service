@@ -26,6 +26,18 @@ jobs:
     - run: npm run lint 
     - run: npm run build --if-present
     - run: npm test
+    # Running tests coverage monitor 
+    - run: npm run test:cov
+    - name: Monitor coverage
+      uses: slavcodev/coverage-monitor-action@v1
+      with:
+        github_token: ${{ secrets.GH_TOKEN }}
+        coverage_path: "coverage/clover.xml"
+        threshold_alert: 10
+        threshold_warning: 50
+        threshold_metric: "lines"
+    # Running e2e tests 
     - name: Running e2e test with Docker
       run: npm run docker:test
+    
  
