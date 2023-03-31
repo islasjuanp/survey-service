@@ -14,7 +14,7 @@ jobs:
         run: npm ci 
 
       - name: Run NPM Audit 
-        run: npm run audit 
+        run: npm audit 
 
       - name: Check for dependencies updates 
         # Only to report the result for now 
