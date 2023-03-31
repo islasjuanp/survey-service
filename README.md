@@ -2,6 +2,7 @@
 # Nests CI/CD Project 
 ![Test Badge](https://github.com/islasjuanp/nest-cicd/actions/workflows/test.yml/badge.svg)
 ![Docker Badge](https://github.com/islasjuanp/nest-cicd/actions/workflows/docker-image.yml/badge.svg)
+![Audit](https://github.com/islasjuanp/nest-cicd/actions/workflows/audit.yml/badge.svg)
 
 ## Description
 
