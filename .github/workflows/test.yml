@@ -10,6 +10,12 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+      checks: write
+      pull-requests: write 
+      actions: read 
+      statuses: write 
 
     strategy:
       matrix:
@@ -28,15 +34,18 @@ jobs:
     - run: npm test
     # Running tests coverage monitor 
     - run: npm run test:cov
-    - name: Monitor coverage
+
+    - if: github.event_name == 'pull_request' && ! contains(github.event.pull_request.user.login, 'dependabot[bot]')
+      name: Monitor coverage
       uses: slavcodev/coverage-monitor-action@v1
       with:
-        github_token: ${{ secrets.GH_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         coverage_path: "coverage/clover.xml"
         threshold_alert: 80
         threshold_warning: 50
         threshold_metric: "lines"
         comment_footer: false
+
     # Running e2e tests 
     - name: Running e2e test with Docker
       run: npm run docker:test
