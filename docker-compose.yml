@@ -1,13 +1,13 @@
 version: '3.8'
 services:
   api:
-    container_name: "nest-cicd-${NODE_ENV:-dev}"
-    image: "nest-cicd-${NODE_ENV:-dev}"
+    container_name: "survey-service-${NODE_ENV:-dev}"
+    image: "survey-service-${NODE_ENV:-dev}"
     environment:
       - NODE_ENV=${NODE_ENV:-dev}
       - DB_USER=${MYSQL_USER:-user}
       - DB_PASS=${MYSQL_PASSWORD:-pass1234}
-      - DB_NAME=${MYSQL_DATABASE:-nest_cicd}
+      - DB_NAME=${MYSQL_DATABASE:-survey_service}
       - DB_HOST=${DB_HOST:-mysql}
     build: . 
     ports:
@@ -24,7 +24,7 @@ services:
     environment: 
       - MYSQL_USER=${MYSQL_USER:-user}
       - MYSQL_PASSWORD=${MYSQL_PASSWORD:-pass1234}
-      - MYSQL_DATABASE=${MYSQL_DATABASE:-nest_cicd}
+      - MYSQL_DATABASE=${MYSQL_DATABASE:-survey_service}
       - MYSQL_ROOT_PASSWORD=${MYSQL_PASSWORD:-pass1234}
     networks:
       - nesjs-network

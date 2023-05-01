@@ -31,7 +31,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4
         with:
-          images: islasjuanp/nest-cicd
+          images: islasjuanp/survey-service
       
       - name: Build and push Docker image
         uses: docker/build-push-action@v4
