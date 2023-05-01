@@ -1,14 +1,12 @@
 ![](./static/images/logo.png)
-# Nests CI/CD Project 
-![Test Badge](https://github.com/islasjuanp/nest-cicd/actions/workflows/test.yml/badge.svg)
-![Docker Badge](https://github.com/islasjuanp/nest-cicd/actions/workflows/docker-image.yml/badge.svg)
-![Audit](https://github.com/islasjuanp/nest-cicd/actions/workflows/audit.yml/badge.svg)
+# Survey Service 
+![Test Badge](https://github.com/islasjuanp/survey-service/actions/workflows/test.yml/badge.svg)
+![Docker Badge](https://github.com/islasjuanp/survey-service/actions/workflows/docker-image.yml/badge.svg)
+![Audit](https://github.com/islasjuanp/survey-service/actions/workflows/audit.yml/badge.svg)
 
 ## Description
 
-This project is a CI/CD pipeline implementation for a NestJS application using GitHub Actions. 
-
-The pipeline is designed to automate the process of building, testing, and deploying the application, ensuring that changes are thoroughly tested and safely deployed to production. With this pipeline in place, the development team can focus on writing code, while the pipeline handles the rest, improving efficiency and reducing errors.
+The survey service utilizes NestJS framework, MongoDB database, and GraphQL to provide a streamlined and efficient way for users to create, manage, and analyze surveys.
 
 ## Installation
 
